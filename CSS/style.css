@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header h1{
+    font-family: 'Sacramento', cursive;
+    font-size: calc(1rem + 8vw);
+    font-weight: 600;    
+    line-height: 0;
+
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+
+    /* Making font gradient */
+    background: linear-gradient(to right, #0400BA 8%, #C04141 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    z-index: 1;
+}
+header p{
+    font-size: calc(0.6em + 2vw);
+    line-height: 2;
+    z-index : 5;
+    line-height: 0;
+    font-weight: 100;
+
+    background: linear-gradient(to right, #C04141 40%, #0400BA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+
+}
+header{
+    background-color: #C7F3ED;
+    height: 100vh;
+    
+    position: relative;
+    z-index: -2;
+
+    overflow: hidden;
+}
+header img{
+    
+    width: 30vw;
+    height: 30vw;
+    margin-bottom: -4em;
+    
+    position: absolute;
+    bottom: 0;
+    /* copied from stackoverflow */
+    right:25%;
+    left:50%;
+    /* Subtracting half of img width */
+    margin-left : calc(-30vw/2);
+    
+}
+.clip-path{
+        width: 100vw;
+        max-width : 100%;
+        height: calc(20em + 50vw);
+
+        background: #38C1AF;
+        clip-path: polygon(0 0, 100% 0, 100% 20%, 0 35%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -2;
+}
+.triangle-side{
+    width: 0;
+    height: 0;
+    border-right: calc((5em + 65vw)/2) solid white;
+    border-top: 8vh solid transparent;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+section div.meImg{
+    margin-top: 4rem;
+    position: relative;
+    height: 22vw;
+}
+
+div.hello > h2{
+    font-size: calc(.7rem + 8vh);
+    /* Making font gradient */
+    background: linear-gradient(to right, #0400BA 8%, #C04141 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    line-height: 1.4;
+
+}
+div.hello > p{
+    font-size: calc(.5rem + 3vh);
+    color:#059682;
+}
+hr{
+    border-style : dotted none none none;
+    width: 40vw;
+    border-width: calc(.5em + 2vh);
+    margin: 4em 0 0 -20vw;
+
+    position: relative;
+    left: 50vw;
+    right: 25vw;
+    border-color:  #44c9b7;
+
+}
+.experiences > h3{
+    font-size: calc(.4rem + 5vh);
+    /* Making font gradient */
+    background: linear-gradient(to right, #0400BA 8%, #C04141 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-top: 1.5em;
+}
+.experiences-element{
+    margin-top: 7vh;
+    display: flex;
+    
+    justify-content: space-around;
+    
+}
+.experiences-element > img{
+    width: 13vw;
+    height: 13vw;
+    
+}
+footer{
+    background-color :#C7F3ED;
+    margin-top: 2em;
+}
+footer > .social-media{
+    padding-top: 4vh;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    height:14vh;
+}
+div.social-media img{
+    width: 10vh;
+    height: 10vh;
+
+    transition: all 400ms;
+}
+footer > p{
+    margin-top: 3vh;
+    background : linear-gradient(to right, #0400BA 8%, #C04141 60%);
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+
+    font-size : calc(0.4em + 2vh);
+}
+
+
+@media (min-width: 700px){
+    div.social-media img:hover{
+        transform: scale(1.5);
+
+        border-radius: 50%;
+        background-color: whitesmoke;
+    }
+    img[src*='sulabh']{
+        width : 18vw;
+        height: 18vw;
+        border-radius: 10%;
+
+        transition : all 700ms;
+    
+    }
+    .meImg > span{
+        display: inline-block;
+        width: 17vw;
+        height: 17vw;
+        
+        position: absolute;
+        top: 1em;
+        left: 41vw;
+        
+        background-color : #38C1AF;
+        z-index: -2;
+        transform: rotate(50deg);
+
+        transition: all 650ms;
+}
+
+    img[src*='sulabh']:hover{
+        border-radius: 50%;
+        border: 0.8em solid #38C1AF;
+        box-shadow: 0px 0px 20px 10px #89b8b1;
+    }
+    /* when image is over, set property of span to */
+    img[src*='sulabh']:hover + span{
+        transform : rotate(5090deg) scale(0.8);
+    
+    }
+    
+    
+}
+
+@media (max-width:700px){
+
+    .clip-path{
+        height: calc(20em + 50vw);
+
+        clip-path: polygon(0 0, 100% 0, 100% 28%, 0 50%);
+    }   
+    header h1{
+        font-size: calc(1rem + 12vw);
+        font-weight: 600;    
+        line-height: 0;
+
+        padding-top: 1.5em;
+        padding-bottom: 0.5em;
+    }
+    header p{
+        font-size: calc(0.7em + 4vw);
+        line-height: 2.7;
+        z-index : 5;
+        line-height: 0;
+        font-weight: 500;
+
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+
+    }
+    header{
+        height: calc(20em + 50vw);
+    }
+    header img{
+        width: 18.5rem;
+        height: 15.625rem;
+        margin-bottom : 0;
+        
+        position: absolute;
+        bottom: 0;
+        /* copied from stackoverflow */
+        right:25%;
+        left:50%;
+        /* Subtracting half of img width */
+        margin-left:-9.25em; 
+        
+    }
+     .triangle-side{
+        width: 0;
+        height: 0;
+        border-right: calc((5em + 10vw)/2) solid white;
+        border-top: 4vh solid transparent;
+
+    }
+      
+    /* Section starting from here */
+    img[src*="sulabh"]{
+        width: 10em;
+        height: 10em;
+        border-radius: 50%;    
+
+        border: 0.8em solid #38C1AF;
+        box-shadow: 0px 0px 20px 10px #89b8b1;
+    }
+    div.hello{
+        margin-top: 1em;
+    }
+    section div.meImg{
+        height: 25vh;
+    }
+    div.hello > h2{
+        font-size: calc(.7rem + 6vw);
+    }
+    div.hello > p{
+        font-size: calc(.5rem + 2vw);
+    }
+    hr{
+        border-width: calc(.5em + 2vw);
+    
+    }
+    
+    .experiences > h3{
+        font-size: calc(.4rem + 4vw);
+    }
+    .experiences-element{
+        margin-top: 3vh;
+        
+    }
+    .experiences-element > img{
+        width: 13vh;
+        height: 13vh;
+        
+    }
+    footer{
+        background-color :#C7F3ED;
+        margin-top: 2em;
+    }
+    footer > .social-media{
+        padding-top: 2vh;
+    }
+    div.social-media img{
+        width: 8vh;
+        height: 8vh;
+    }
+    footer > p{
+        font-size : calc(0.5em + 2vw);
+    }
+
+}
